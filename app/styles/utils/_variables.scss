@@ -1,0 +1,48 @@
+/*----- Colors -----*/
+
+$gray-darkest: #333;
+$gray-darker: #666;
+$gray-dark: #999;
+$gray: #ccc;
+$gray-light: #f2f2f2;
+$gray-lighter: #eee;
+$gray-lightest: #f8f8f8;
+$white: white;
+
+$slate-gray: #39424b;
+$slate-green: #56817a;
+
+$blue-ksquare: #46a0b6;
+
+$background-blue: #1e326b;
+$background-purple: purple;
+
+$primary-color: $slate-green;
+$secondary-color: $slate-gray;
+
+$link-color: #2895f1;
+
+/*----- Fonts -----*/
+
+$primary-font: "Lato", Helvetica, Arial, sans-serif;
+$secondary-font: "Josefin Sans", Helvetica, Arial, sans-serif;
+
+/*----- Dimensions and sizes -----*/
+
+$print-width: 21cm;
+$print-height: 29.7cm;
+$page-width: 800px;
+$page-height: 792px;
+$header-height: 150px;
+
+$mobile-width: 435px;
+$tablet-width: 768px;
+$laptop-width: 992px;
+$desktop-width: 1200px;
+$retina-width: 1920px;
+
+$font-unit: 4px;
+$profile-pic-size: 90px;
+$aside-width: 160px;
+$aside-margin: 20px;
+$pad-unit: 5px;

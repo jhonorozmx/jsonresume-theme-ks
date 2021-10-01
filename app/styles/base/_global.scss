@@ -1,0 +1,44 @@
+.container {
+  padding-top: spacing(4);
+}
+
+.keyline {
+  width: spacing(9);
+  margin: 8px 0 10px;
+  border-top: 1px solid $primary-color;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+.profile-pic {
+  display: flex;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  width: 30%;
+
+  img {
+    height: $profile-pic-size;
+    margin: auto;
+    width: $profile-pic-size;
+  }
+}
+
+.summary {
+  margin: spacing(1) 0 spacing(1);
+}
