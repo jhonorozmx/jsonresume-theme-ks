@@ -1,5 +1,5 @@
 .page {
-  background: white;
+  background: $white;
   display: block;
   margin: 0;
   min-height: $page-height;
@@ -79,5 +79,12 @@
   margin-bottom: spacing(3);
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+.title {
+  margin: 8px 0;
+  h3 {
+    color: $text-title-color;
   }
 }

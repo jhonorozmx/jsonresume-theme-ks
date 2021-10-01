@@ -39,7 +39,7 @@ handlebars.registerHelper({
   },
 
   formatDate: function (date) {
-    return moment(date).format('MM/YYYY');
+    return moment(date).format('MMM YYYY');
   },
   isDev: function (label, options) {
     const terms = ["develop", "programmer"];

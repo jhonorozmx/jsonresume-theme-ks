@@ -13,9 +13,12 @@ $slate-gray: #39424b;
 $slate-green: #56817a;
 
 $blue-ksquare: #46a0b6;
+$dark-blue: #1e326b;
 
-$background-dev: #1e326b;
-$background-employee: purple;
+$background-dev: $dark-blue;
+$background-employee: $blue-ksquare;
+
+$text-title-color: $dark-blue;
 
 $primary-color: $slate-green;
 $secondary-color: $slate-gray;

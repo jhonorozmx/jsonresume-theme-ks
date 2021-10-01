@@ -13,8 +13,13 @@ h3,
 h4,
 h5,
 h6 {
-  text-transform: uppercase;
   margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
 }
 
 h1 {
@@ -31,7 +36,7 @@ h2 {
 }
 
 h3 {
-  @include lato(300);
+  @include lato(500);
   @include font-size(3.5);
   letter-spacing: 0.4px;
 
