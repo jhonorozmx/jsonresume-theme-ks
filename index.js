@@ -40,9 +40,12 @@ handlebars.registerHelper({
 
   formatDate: function (date) {
     return moment(date).format('MM/YYYY');
+  },
+  isDev: function (label, options) {
+    const terms = ["develop", "programmer"];
+    return terms.some(term =>  label.toLowerCase().includes(term)) ? options.fn(this) : options.inverse(this);
   }
 });
-
 
 function render(resume) {
   let dir = __dirname + '/public',
@@ -54,7 +57,6 @@ function render(resume) {
   Handlebars.partials(dir + '/views/partials/**/*.{hbs,js}');
   Handlebars.partials(dir + '/views/components/**/*.{hbs,js}');
 
-  // return Handlebars.compile(resumeTemplate);
   return Handlebars.compile(resumeTemplate)({
     css: css,
     resume: resume

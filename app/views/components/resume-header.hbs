@@ -1,6 +1,6 @@
 {{#resume.basics}}
 <header class="resume-header clearfix">
-  <div class="background-header background-blue">
+  <div class="background-header {{#isDev label }} background-dev {{else}} background-employee {{/isDev}}">
     <div class="profile-pic pull-left">
       {{#if image}}
       <img src="{{image}}" alt="profile-pic">
