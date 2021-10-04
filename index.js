@@ -8,6 +8,8 @@ const
 
 Swag.registerHelpers(handlebars);
 
+const isTechnology = (keywords) => keywords.some(keyword =>  keyword.toLowerCase() == "technologies");
+
 handlebars.registerHelper({
   removeProtocol: function (url) {
     return url.replace(/.*?:\/\//g, '');
@@ -41,10 +43,10 @@ handlebars.registerHelper({
   formatDate: function (date) {
     return moment(date).format('MMM YYYY');
   },
-  isDev: function (label, options) {
-    const terms = ["develop", "programmer"];
-    return terms.some(term =>  label.toLowerCase().includes(term)) ? options.fn(this) : options.inverse(this);
-  }
+  isDev: (label, options) => ["develop", "programmer"].some(term =>  label.toLowerCase().includes(term)) ? options.fn(this) : options.inverse(this),
+  isTechnology: (skill, options) => isTechnology(skill.keywords) ? options.fn(skill) : options.inverse(this),
+  ifHasTechnologies: (skills, options) => skills.some(skill => isTechnology(skill.keywords)) ? options.fn(skills) : options.inverse(this),
+  console: (object) => JSON.stringify(object),
 });
 
 function render(resume) {
