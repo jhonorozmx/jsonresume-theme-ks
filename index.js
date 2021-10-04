@@ -8,7 +8,7 @@ const
 
 Swag.registerHelpers(handlebars);
 
-const isTechnology = (keywords) => keywords.some(keyword =>  keyword.toLowerCase() === "technologies");
+const isTechnology = (keywords) => keywords && keywords.some(keyword =>  keyword.toLowerCase() === "technologies");
 const isSkill = (keywords) => !isTechnology(keywords);
 const isCertification = (education) => education.studyType.toLowerCase() === "certification";
 const isEducation = (education) => !isCertification(education); 
