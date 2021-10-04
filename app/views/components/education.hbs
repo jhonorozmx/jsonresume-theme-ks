@@ -1,24 +1,26 @@
-{{#if resume.education.length}}
+{{#ifHasEducation resume.education}}
 <div class="container education-container">
   {{> title value="Education"}} 
-  {{#each resume.education}}
-  <section class="item">
-    {{#if studyType}}<h4>{{studyType}}</h4>{{/if}}
-    {{#if institution}}<h4>{{institution}}</h4>{{/if}}
+  {{#each .}}
+    {{#isEducation .}}
+      <section class="item">
+        {{#if studyType}}<h4>{{studyType}}</h4>{{/if}}
+        {{#if institution}}<h4>{{institution}}</h4>{{/if}}
 
-    <h4>
-      {{#if startDate}}
-      <span class="startDate">{{formatDate startDate}}</span>
-      {{#if endDate}}
-      <span class="endDate"> - {{formatDate endDate}}</span>
-      {{else}}
-      <span class="endDate"> - Present</span>
-      {{/if}}
-      {{else if releaseDate}}
-      {{formatDate releaseDate}}
-      {{/if}}
-    </h4>
-  </section>
+        <h4>(
+          {{#if startDate}}
+          <span class="startDate">{{formatYear startDate}}</span>
+          {{#if endDate}}
+          <span class="endDate"> - {{formatYear endDate}}</span>
+          {{else}}
+          <span class="endDate"> - Present</span>
+          {{/if}}
+          {{else if releaseDate}}
+          {{formatDate releaseDate}}
+          {{/if}}
+        )</h4>
+      </section>
+    {{/isEducation}}
   {{/each}}
 </div>
-{{/if}}
+{{/ifHasEducation}}

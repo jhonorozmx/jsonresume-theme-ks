@@ -8,7 +8,10 @@ const
 
 Swag.registerHelpers(handlebars);
 
-const isTechnology = (keywords) => keywords.some(keyword =>  keyword.toLowerCase() == "technologies");
+const isTechnology = (keywords) => keywords.some(keyword =>  keyword.toLowerCase() === "technologies");
+const isSkill = (keywords) => !isTechnology(keywords);
+const isCertification = (education) => education.studyType.toLowerCase() === "certification";
+const isEducation = (education) => !isCertification(education); 
 
 handlebars.registerHelper({
   removeProtocol: function (url) {
@@ -40,12 +43,17 @@ handlebars.registerHelper({
     return addressList.join('<br/>');
   },
 
-  formatDate: function (date) {
-    return moment(date).format('MMM YYYY');
-  },
+  formatDate: (date) => moment(date).format('MMM YYYY'),
+  formatYear: (date) => moment(date).format('YYYY'),
   isDev: (label, options) => ["develop", "programmer"].some(term =>  label.toLowerCase().includes(term)) ? options.fn(this) : options.inverse(this),
   isTechnology: (skill, options) => isTechnology(skill.keywords) ? options.fn(skill) : options.inverse(this),
   ifHasTechnologies: (skills, options) => skills.some(skill => isTechnology(skill.keywords)) ? options.fn(skills) : options.inverse(this),
+  isSkill: (skill, options) => isSkill(skill.keywords) ? options.fn(skill) : options.inverse(this),
+  ifHasSkills: (skills, options) => skills.some(skill => isSkill(skill.keywords)) ? options.fn(skills) : options.inverse(this),
+  isEducation: (education, options) => isEducation(education) ? options.fn(education) : options.inverse(this),
+  ifHasEducation: (educations, options) => educations.some(education => isEducation(education)) ? options.fn(educations) : options.inverse(this),
+  isCertification: (education, options) => isCertification(education) ? options.fn(education) : options.inverse(this),
+  ifHasCertifications: (educations, options) => educations.some(education => isCertification(education)) ? options.fn(educations) : options.inverse(this),
   console: (object) => JSON.stringify(object),
 });
 
