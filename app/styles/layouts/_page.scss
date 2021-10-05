@@ -1,10 +1,12 @@
 .page {
   background: $white;
-  display: block;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   min-height: $page-height;
+  position: relative;
   width: $page-width;
-  @include shadow();
+  // @include shadow();
   @include clearfix();
   .resume-header {
     .background-employee,
@@ -59,20 +61,51 @@
       }
     }
   }
+  .resume-content {
+    display: flex;
+    flex-grow: 1;
+  }
+  .resume-footer {
+    color: $white;
+    display: flex;
+    height: 50px;
+    text-align: center;
+    .footer-text-container {
+      line-height: 16px;
+      margin: auto;
+    }
+
+    &.background-dev {
+      background-color: $background-dev;
+    }
+    &.background-employee {
+      background: $background-employee;
+    }
+  }
+}
+
+.left-column,
+.right-column {
+  padding: 32px;
+}
+
+.title {
+  margin-bottom: 8px;
 }
 
 .left-column {
   background-color: $gray-light;
-  float: left;
-  padding: 0px 20px;
+  flex: 0 0 25%;
   width: 25%;
   word-wrap: break-word;
 }
 
 .right-column {
   overflow: hidden;
-  padding: 0px 20px;
   width: auto;
+  .summary-position {
+    margin-top: 5px;
+  }
 }
 
 .item {
@@ -83,7 +116,6 @@
 }
 
 .title {
-  margin: 8px 0;
   h3 {
     color: $text-title-color;
   }

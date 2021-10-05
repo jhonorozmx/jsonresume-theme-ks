@@ -1,9 +1,24 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Josefin+Sans:300,700);
 
+/* playfair-display-regular - latin */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/Inter-Medium.ttf");
+}
+
 // Font Mixins
 
 // Lato - 300, 400, 700; Italics
-@mixin lato($weight: 400, $isItalic: false) {
+@mixin inter($weight: 400, $isItalic: false) {
   font-family: $primary-font;
   font-weight: $weight;
 
