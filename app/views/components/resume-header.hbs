@@ -1,5 +1,5 @@
 {{#resume.basics}}
-<header class="resume-header clearfix">
+<header class="resume-header {{#isDev label }} resume-header-dev {{else}} resume-header-employee {{/isDev}} clearfix">
   <div class="background-header {{#isDev label }} background-dev {{else}} background-employee {{/isDev}}">
     <div class="profile-pic pull-left">
       {{#if image}}
@@ -8,8 +8,12 @@
     </div>
     <div class="profile-header pull-right">
       <div class="my-auto">
+        <div class="ksquare-image"></div>
         <h1>{{name}}</h1>
         <h2>{{label}}</h2>
+        {{#if url}}
+          <span>{{url}}</span>
+        {{/if}}
       </div>
     </div>
   </div>
