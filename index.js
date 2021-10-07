@@ -45,6 +45,8 @@ handlebars.registerHelper({
 
   formatDate: (date) => moment(date).format('MMM YYYY'),
   formatYear: (date) => moment(date).format('YYYY'),
+  console: (object) => JSON.stringify(object),
+  isArray: (element, options) => Array.isArray(element) ? options.fn(element) : options.inverse(element),
   isDev: (label, options) => ["develop", "programmer"].some(term =>  label.toLowerCase().includes(term)) ? options.fn(this) : options.inverse(this),
   isTechnology: (skill, options) => isTechnology(skill.keywords) ? options.fn(skill) : options.inverse(this),
   ifHasTechnologies: (skills, options) => skills.some(skill => isTechnology(skill.keywords)) ? options.fn(skills) : options.inverse(this),
@@ -54,7 +56,6 @@ handlebars.registerHelper({
   ifHasEducation: (educations, options) => educations.some(education => isEducation(education)) ? options.fn(educations) : options.inverse(this),
   isCertification: (education, options) => isCertification(education) ? options.fn(education) : options.inverse(this),
   ifHasCertifications: (educations, options) => educations.some(education => isCertification(education)) ? options.fn(educations) : options.inverse(this),
-  console: (object) => JSON.stringify(object),
 });
 
 function render(resume) {
