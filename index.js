@@ -8,6 +8,11 @@ const
 
 Swag.registerHelpers(handlebars);
 
+const isTechnology = (keywords) => keywords && keywords.some(keyword =>  keyword.toLowerCase() === "technologies");
+const isSkill = (keywords) => !isTechnology(keywords);
+const isCertification = (education) => education.studyType.toLowerCase() === "certification";
+const isEducation = (education) => !isCertification(education); 
+
 handlebars.registerHelper({
   removeProtocol: function (url) {
     return url.replace(/.*?:\/\//g, '');
@@ -38,11 +43,24 @@ handlebars.registerHelper({
     return addressList.join('<br/>');
   },
 
-  formatDate: function (date) {
-    return moment(date).format('MM/YYYY');
-  }
-});
+  formatDate: (date) => moment(date).format('MMM YYYY'),
+  formatYear: (date) => moment(date).format('YYYY'),
+  console: (object) => JSON.stringify(object),
 
+  technologiesMustache: () => "{{#technologies}}{{name}} |{{/technologies}}",
+  certificationsMustache: () => "{{#certifications}}<section class='item'>{{#specialization}}<h4>{{specialization}}</h4>{{/specialization}}{{#institution}}<h4>{{institution}}</h4>{{/institution}}<h4>({{#startDate}}<span class='startDate'>{{startDate}}</span>{{/startDate}}{{#endDate}}<span class='endDate'> to {{endDate}}</span>{{/endDate}}{{#releaseDate}}{{releaseDate}}{{/releaseDate}})</h4></section>{{/certifications}}",
+
+  isArray: (element, options) => Array.isArray(element) ? options.fn(element) : options.inverse(element),
+  isDev: (label, options) => ["develop", "programmer"].some(term =>  label.toLowerCase().includes(term)) ? options.fn(this) : options.inverse(this),
+  isTechnology: (skill, options) => isTechnology(skill.keywords) ? options.fn(skill) : options.inverse(this),
+  ifHasTechnologies: (skills, options) => !Array.isArray(skills) || skills.some(skill => isTechnology(skill.keywords)) ? options.fn(skills) : options.inverse(this),
+  isSkill: (skill, options) => isSkill(skill.keywords) ? options.fn(skill) : options.inverse(this),
+  ifHasSkills: (skills, options) => !Array.isArray(skills) || skills.some(skill => isSkill(skill.keywords)) ? options.fn(skills) : options.inverse(this),
+  isEducation: (education, options) => isEducation(education) ? options.fn(education) : options.inverse(this),
+  ifHasEducation: (educations, options) => !Array.isArray(educations) || educations.some(education => isEducation(education)) ? options.fn(educations) : options.inverse(this),
+  isCertification: (education, options) => isCertification(education) ? options.fn(education) : options.inverse(this),
+  ifHasCertifications: (educations, options) => !Array.isArray(educations) ||  educations.some(education => isCertification(education)) ? options.fn(educations) : options.inverse(this),
+});
 
 function render(resume) {
   let dir = __dirname + '/public',
@@ -54,7 +72,6 @@ function render(resume) {
   Handlebars.partials(dir + '/views/partials/**/*.{hbs,js}');
   Handlebars.partials(dir + '/views/components/**/*.{hbs,js}');
 
-  // return Handlebars.compile(resumeTemplate);
   return Handlebars.compile(resumeTemplate)({
     css: css,
     resume: resume

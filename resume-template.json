@@ -1,0 +1,14 @@
+{
+  "basics": {
+    "name": "{{name}}",
+    "label": "{{label}}",
+    "image": "{{image}}",
+    "url": "{{url}}",
+    "summary": "{{summary}}"
+  },
+  "work": "{{#work}}<h4 class='summary-position'>{{position}}</h4><h4>{{company}}</h4><h4>{{projectName}}</h4><h4>{{client}}</h4><h4>{{city}}.{{#startDate}}<span class='startDate'>{{startDate}}</span>{{/startDate}}{{#endDate}}<span class='endDate'> to {{endDate}}</span>{{/endDate}}</h4>{{#skills}}{{.}} |{{/skills}}{{#technologies}}{{.}} |{{/technologies}}{{/work}}",
+  "education": "{{#education}}<section class='item'>{{#studyType}}<h4>{{studyType}}</h4>{{/studyType}}{{#institution}}<h4>{{institution}}</h4>{{/institution}}<h4>({{#startDate}}<span class='startDate'>{{startDate}}</span>{{/startDate}}{{#endDate}}<span class='endDate'> - {{endDate}}</span>{{/endDate}}{{#releaseDate}}{{releaseDate}}{{/releaseDate}})</h4></section>{{/education}}",
+  "awards": "{{#awards}}<h4>{{title}}</h4>{{/awards}}",
+  "skills": "{{#skills}}<h4>{{name}}</h4>{{/skills}}",
+  "languages": "{{#languages}}<h4>{{language}} {{#fluency}}: {{fluency}} {{/fluency}}</h4>{{/languages}}"
+}

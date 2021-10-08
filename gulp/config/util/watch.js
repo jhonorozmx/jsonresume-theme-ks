@@ -23,6 +23,7 @@ gulp.task('watch', function () {
 
     gulp.watch('app/views/**/*.hbs', ['html']);
     gulp.watch('app/images/**/*', ['images']);
+    gulp.watch('app/fonts/**/*', ['fonts']);
     gulp.watch('app/styles/**/*.scss', ['styles']);
   }, 2500);
 });

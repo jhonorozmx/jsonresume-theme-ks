@@ -4,7 +4,7 @@ const HubRegistry = require('gulp-hub')
 const hub = new HubRegistry(['gulp/config/util/*.js', 'gulp/config/compile/*.js', 'gulp/tasks/*.js'])
 gulp.registry(hub)
 
-const build = gulp.series('clean', 'styles', 'html', 'images', 'extras', 'resume');
+const build = gulp.series('clean', 'styles', 'html', 'images', 'fonts', 'extras', 'resume');
 
 gulp.task('build', build);
 gulp.task('default', build);

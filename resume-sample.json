@@ -1,77 +1,118 @@
 {
   "basics": {
-    "name": "Richard Hendriks",
+    "name": "Abelardo Ramírez",
     "label": "Programmer",
-    "picture": "http://www.piedpiper.com/app/themes/pied-piper/dist/images/richard.png",
-    "email": "abelardo@theksquaregroup.com",
-    "phone": "(912) 555-4321",
-    "website": "http://piedpiper.com",
-    "summary": "Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinals!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!",
-    "location": {
-      "address": "Newell Road",
-      "postalCode": "94303",
-      "city": "Palo Alto",
-      "countryCode": "US",
-      "region": "CA"
-    },
-    "profiles": [
-      {
-        "network": "Twitter",
-        "username": "siliconHBO",
-        "url": "https://twitter.com/siliconHBO"
-      },
-      {
-        "network": "Facebook",
-        "username": "SiliconHBO",
-        "url": "https://www.facebook.com/SiliconHBO"
-      },
-      {
-        "network": "Instagram",
-        "username": "siliconhbo",
-        "url": "https://www.instagram.com/siliconhbo/"
-      }
-    ]
+    "image": "https://st.depositphotos.com/1779253/5140/v/450/depositphotos_51405259-stock-illustration-male-avatar-profile-picture-use.jpg",
+    "url": "http://piedpiper.com",
+    "summary": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat."
   },
   "work": [
     {
-      "company": "Pied Piper",
       "position": "CEO/President",
-      "website": "http://piedpiper.com",
+      "company": "Pied Piper",
+      "client": "Pedro Gomez",
+      "city": "Mérida",
       "startDate": "2014-04-13",
+      "endDate": "2015-04-13",
+      "projectName": "Syncron",
       "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
-      "highlights": [
-        "Build an algorithm for artist to detect if their music was violating copy right infringement laws",
-        "Successfully won Techcrunch Disrupt",
-        "Optimized an algorithm that holds the current world record for Weisman Scores"
+      "skills": [
+        "Web development",
+        "Communication with team"
+      ],
+      "technologies": [
+        "Javascript", "React JS", "Firebase"
       ]
     },
     {
-      "company": "Hooli",
       "position": "Software Engineer",
-      "website": "http://www.hooli.xyz/",
+      "company": "Hooli",
+      "client": "Test Client",
       "startDate": "2013-01-01",
       "endDate": "2014-04-06",
-      "summary": "Worked on optimizing the backend algorithms for Hooli"
-    }
-  ],
-  "volunteer": [
+      "summary": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
+      "skills": [
+        "Web development",
+        "Communication with team"
+      ],
+      "technologies": [
+        "Javascript", "React JS", "Firebase"
+      ]
+    },
     {
-      "organization": "CoderDojo",
-      "position": "Teacher",
-      "website": "http://coderdojo.com/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
-      "summary": "Global movement of free coding clubs for young people.",
-      "highlights": [
-        "Awarded 'Teacher of the Month'"
+      "position": "CEO/President",
+      "company": "Pied Piper",
+      "client": "Pedro Gomez",
+      "city": "Mérida",
+      "startDate": "2014-04-13",
+      "endDate": "2015-04-13",
+      "projectName": "Syncron",
+      "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
+      "skills": [
+        "Web development",
+        "Communication with team"
+      ],
+      "technologies": [
+        "Javascript", "React JS", "Firebase"
+      ]
+    },
+    {
+      "position": "CEO/President",
+      "company": "Pied Piper",
+      "client": "Pedro Gomez",
+      "city": "Mérida",
+      "startDate": "2014-04-13",
+      "endDate": "2015-04-13",
+      "projectName": "Syncron",
+      "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
+      "skills": [
+        "Web development",
+        "Communication with team"
+      ],
+      "technologies": [
+        "Javascript", "React JS", "Firebase"
+      ]
+    },
+    {
+      "position": "CEO/President",
+      "company": "Pied Piper",
+      "client": "Pedro Gomez",
+      "city": "Mérida",
+      "startDate": "2014-04-13",
+      "endDate": "2015-04-13",
+      "projectName": "Syncron",
+      "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
+      "skills": [
+        "Web development",
+        "Communication with team"
+      ],
+      "technologies": [
+        "Javascript", "React JS", "Firebase"
+      ]
+    },
+    {
+      "position": "CEO/President",
+      "company": "Pied Piper",
+      "client": "Pedro Gomez",
+      "city": "Mérida",
+      "startDate": "2014-04-13",
+      "endDate": "2015-04-13",
+      "projectName": "Syncron",
+      "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
+      "skills": [
+        "Web development",
+        "Communication with team"
+      ],
+      "technologies": [
+        "Javascript", "React JS", "Firebase"
       ]
     }
   ],
   "education": [
     {
-      "institution": "Stanford",
+      "institution": "Mathematics faculty",
       "area": "Computer Science",
-      "studyType": "B.S",
+      "studyType": "Bachelors degree",
       "location": "Palo Alto, CA",
       "specialization": "Machine Learning",
       "startDate": "2011-06-01",
@@ -81,42 +122,59 @@
         "DB1101 - Basic SQL",
         "CS2011 - Java Introduction"
       ]
+    },
+    {
+      "institution": "Mathematics faculty",
+      "studyType": "Bachelors degree",
+      "location": "Palo Alto, CA",
+      "specialization": "Machine Learning",
+      "startDate": "2011-06-01",
+      "endDate": "2014-01-01",
+      "gpa": "GPA 4.0",
+      "courses": [
+        "DB1101 - Basic SQL",
+        "CS2011 - Java Introduction"
+      ]
+    },
+    {
+      "institution": "Institute example",
+      "specialization": "CMMI DEV 2 certificate",
+      "studyType": "certification",
+      "startDate": "2011-06-01",
+      "endDate": "2014-01-01"
     }
   ],
   "awards": [
     {
-      "title": "Digital Compression Pioneer Award",
-      "date": "2014-11-01",
-      "awarder": "Techcrunch",
-      "summary": "There is no spoon."
-    }
-  ],
-  "publications": [
+      "title": "skill 1"
+    },
     {
-      "name": "Video compression for 3d media",
-      "publisher": "Hooli",
-      "releaseDate": "2014-10-01",
-      "website": "http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)",
-      "summary": "Innovative middle-out compression algorithm that changes the way we store data."
+      "title": "skill 2"
+    },
+    {
+      "title": "skill 3"
     }
   ],
   "skills": [
     {
-      "name": "Web Development",
-      "level": "Master",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "Javascript"
-      ]
+      "name": "Web Development"
+    },
+    {
+      "name": "Mobile Development"
+    },
+    {
+      "name": "Database Management"
     },
     {
       "name": "Compression",
-      "level": "Master",
       "keywords": [
-        "Mpeg",
-        "MP4",
-        "GIF"
+        "technologies"
+      ]
+    },
+    {
+      "name": "React JS",
+      "keywords": [
+        "technologies"
       ]
     }
   ],
@@ -124,21 +182,10 @@
     {
       "language": "English",
       "fluency": "Native speaker"
-    }
-  ],
-  "interests": [
+    },
     {
-      "name": "Wildlife",
-      "keywords": [
-        "Ferrets",
-        "Unicorns"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Erlich Bachman",
-      "reference": "It is my pleasure to recommend Richard. That is all."
+      "language": "French",
+      "fluency": "Basic"
     }
   ]
 }

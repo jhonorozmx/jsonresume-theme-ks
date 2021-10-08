@@ -1,31 +1,65 @@
 {{#if resume.work.length}}
 <div class="container work-container">
-  {{> title value="Experience"}}
+  {{> title value="Professional history"}}
 
-  {{#each resume.work}}
-  <section class="item">
-    {{> section-header name=this.company }}
+  {{#isArray resume.work}}
+    {{#each .}}
+      <section class="item">
 
-    {{#if position}}
-      <h4>{{position}}</h4>
-    {{/if}}
+        {{#if position}}
+          <h4 class="summary-position">{{position}}</h4>
+        {{/if}}
 
-    {{#if client}}
-    <h4>{{client}}</h4>
-    {{/if}}
+        {{#if company}}
+          <h4>{{company}}</h4>
+        {{/if}}
 
-    {{#if summary}}
-      <p class="summary">{{summary}}</p>
-    {{/if}}
+        {{#if projectName}}
+          <h4>{{projectName}}</h4>
+        {{/if}}
 
-    {{#if highlights.length}}
-      <ul>
-        {{#each highlights}}
-        <li>{{.}}</li>
-        {{/each}}
-      </ul>
-    {{/if}}
-  </section>
-  {{/each}}
+        {{#if client}}
+          <h4>{{client}}</h4>
+        {{/if}}
+
+        {{#if city}}
+          <h4>
+            {{city}}.
+            {{#if startDate}}
+              <span class="startDate">{{formatDate startDate}}</span>
+              {{#if endDate}}
+                <span class="endDate"> to {{formatDate endDate}}</span>
+              {{else}}
+                <span class="endDate"> to Present</span>
+              {{/if}}
+            {{/if}}
+          </h4>
+        {{/if}}
+
+        {{#if summary}}
+          <p class="summary">{{summary}}</p>
+        {{/if}}
+
+        <h4>
+          {{#if skills}}
+            {{#each skills}}
+              {{.}} |
+            {{/each}}
+          {{/if}}
+
+          {{#if technologies}}
+            {{#each technologies}}
+            {{.}} |
+            {{/each}}
+          {{/if}}
+        </h4>
+
+      </section>
+    {{/each}}
+
+  {{else}}
+    {{{.}}}
+  {{/isArray}}
+
 </div>
 {{/if}}

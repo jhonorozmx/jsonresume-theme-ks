@@ -16,19 +16,32 @@
     {{> resume-header}}
     <div class="resume-content">
       <aside class="left-column">
-        {{> education }}
-        {{> about }}
-        {{> skills }}
-        {{> languages }}
-        {{> interests }}
+        <div class="left-column-padding">
+          {{> education }}
+          {{> technologies }}
+          {{> certifications }}
+          {{> skills }}
+          {{> awards }}
+          {{> languages }}
+        </div>
       </aside>
       <div class="right-column">
         {{> summary}}
         {{> work }}
         {{> volunteer }}
-        {{> awards }}
         {{> publications }}
         {{> references }}
+      </div>
+    </div>
+    <div class="resume-footer {{#isDev resume.basics.label }} background-dev {{else}} background-employee {{/isDev}}">
+      <div class="footer-text-container">
+        <h4>
+          <strong>Girish Mallampalli |</strong> Engineering and Digital Transformation <strong>| T. 9+1 646 775 1496 |</strong>
+          girish.mallampalli@theksquaregroup.com
+        </h4>
+        <h4>
+          <strong>Dallas HQ</strong>, 433 E Las Colinas Blvd, Suite 850, Irving, TX 75039.
+        </h4>
       </div>
     </div>
   </main>
