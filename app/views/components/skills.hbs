@@ -2,11 +2,15 @@
 <div class="container skills-container">
   {{> title value="Skills"}}
   <section>
+  {{#isArray .}}
     {{#each .}}
       {{#isSkill .}}
         <h4>{{name}}</h4>
       {{/isSkill}}
     {{/each}}
+  {{else}}
+    {{{.}}}
+  {{/isArray}}
   </section>
 </div>
 {{/ifHasSkills}}

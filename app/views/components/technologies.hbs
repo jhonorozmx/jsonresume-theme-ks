@@ -4,11 +4,15 @@
     {{> title value="Technologies"}}
     <section>
         <h4>
-        {{#each .}}
-            {{#isTechnology .}} 
-                {{name}} |
-            {{/isTechnology}}
-        {{/each}}
+        {{#isArray .}}
+            {{#each .}}
+                {{#isTechnology .}} 
+                    {{name}} |
+                {{/isTechnology}}
+            {{/each}}
+        {{else}}
+            {{technologiesMustache}}
+        {{/isArray}}
         </h4> 
     </section>
 </div>
