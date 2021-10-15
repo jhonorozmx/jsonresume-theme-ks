@@ -1,19 +1,19 @@
 
 {{#ifHasTechnologies resume.skills}}
-<div class="container technologies-container">
-    {{> title value="Technologies"}}
-    <section>
+  {{#isArray .}}
+    <div class="container technologies-container">
+      {{> title value="Technologies"}}
+      <section>
         <h4>
-        {{#isArray .}}
-            {{#each .}}
-                {{#isTechnology .}} 
-                    {{name}} |
-                {{/isTechnology}}
-            {{/each}}
-        {{else}}
-            {{technologiesMustache}}
-        {{/isArray}}
-        </h4> 
-    </section>
-</div>
+          {{#each .}}
+            {{#isTechnology .}} 
+              {{name}} |
+            {{/isTechnology}}
+          {{/each}}
+        </h4>    
+      </section>
+    </div>
+  {{else}}
+    {{{technologiesMustache}}}
+  {{/isArray}}
 {{/ifHasTechnologies}}

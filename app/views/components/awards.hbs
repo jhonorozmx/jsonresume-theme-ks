@@ -1,14 +1,14 @@
 {{#if resume.awards.length}}
-  <div class="container awards-container">
-    {{> title value="Awards"}}
-    <section class="item">
-    {{#isArray resume.awards}}
-      {{#each .}}
-        <h4>{{title}}</h4>
-      {{/each}}
-    {{else}}
-      {{{.}}}
-    {{/isArray}}
-    </section>
-  </div>
+  {{#isArray resume.awards}}
+    <div class="container awards-container">
+      {{> title value="Awards"}}
+      <section class="item">
+        {{#each .}}
+          <h4>{{title}}</h4>
+        {{/each}}
+      </section>
+    </div>
+  {{else}}
+    {{{.}}}
+  {{/isArray}}
 {{/if}}

@@ -1,30 +1,30 @@
 {{#ifHasCertifications resume.education}}
-<div class="container certification-container">
+  {{#isArray .}}
+    <div class="container certification-container">
     {{> title value="Certifications"}}
-    {{#isArray .}}
-        {{#each .}}
-        {{#isCertification .}}
-        <section class="item">
-            {{#if specialization}}<h4>{{specialization}}</h4>{{/if}}
-            {{#if institution}}<h4>{{institution}}</h4>{{/if}}
+    {{#each .}}
+    {{#isCertification .}}
+    <section class="item">
+      {{#if specialization}}<h4>{{specialization}}</h4>{{/if}}
+      {{#if institution}}<h4>{{institution}}</h4>{{/if}}
 
-            <h4>(
-                {{#if startDate}}
-                <span class="startDate">{{formatDate startDate}}</span>
-                {{#if endDate}}
-                <span class="endDate"> to {{formatDate endDate}}</span>
-                {{else}}
-                <span class="endDate"> to Present</span>
-                {{/if}}
-                {{else if releaseDate}}
-                {{formatDate releaseDate}}
-                {{/if}}
-            )</h4>
-        </section>
-        {{/isCertification}}
-        {{/each}}
-    {{else}}
-        {{{certificationsMustache}}}
-    {{/isArray}}
-</div>
+      <h4>(
+        {{#if startDate}}
+        <span class="startDate">{{formatDate startDate}}</span>
+        {{#if endDate}}
+        <span class="endDate"> to {{formatDate endDate}}</span>
+        {{else}}
+        <span class="endDate"> to Present</span>
+        {{/if}}
+        {{else if releaseDate}}
+        {{formatDate releaseDate}}
+        {{/if}}
+      )</h4>
+    </section>
+    {{/isCertification}}
+    {{/each}}
+    </div>
+  {{else}}
+    {{{certificationsMustache}}}
+  {{/isArray}}
 {{/ifHasCertifications}}

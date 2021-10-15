@@ -7,124 +7,122 @@ body {
   color: $secondary-color;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-h1,
-h2,
-h3 {
-  text-transform: uppercase;
-}
-
-h1 {
-  @include inter(400);
-  @include font-size(2);
-  letter-spacing: 1px;
-  margin-bottom: spacing(1);
-}
-
-h2 {
-  @include inter(300);
-  @include font-size(1.4);
-  letter-spacing: 0.5px;
-  margin-bottom: spacing(1);
-}
-
-h3 {
-  @include inter(500);
-  @include font-size(1.2);
-  letter-spacing: 0.4px;
-
-  &.bold {
-    font-weight: 700;
-  }
-}
-
-h4 {
-  @include inter(400);
-  @include font-size(1);
-
-  &.bold {
-    font-weight: 700;
-  }
-}
-
-h5 {
-  @include inter(300);
-  @include font-size(0.8);
-
-  &.italic {
-    font-style: italic;
-  }
-}
-
-h6 {
-  @include inter();
-  @include font-size(0.6);
-}
-
-a {
-  color: inherit;
-  text-decoration: inherit;
-
-  &:hover {
-    color: $link-color;
+.page {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
   }
 
-  .fa-external-link {
-    font-size: 10px;
-    vertical-align: text-top;
+  h1,
+  h2,
+  h3 {
+    text-transform: uppercase;
   }
-}
-
-p,
-li {
-  @include font-size(2.75);
-}
-
-blockquote {
-  @include font-size(2.75);
-  @include inter($isItalic: true);
-
-  margin: spacing(2) spacing(5);
-}
-
-em {
-  color: $gray-dark;
-}
-
-ul {
-  margin: spacing(2) 0 0;
-  -webkit-padding-start: spacing(5);
-
-  li {
-    padding-left: spacing(2);
+  h1 {
+    @include inter(400);
+    @include font-size(2);
+    letter-spacing: 1px;
+    margin-bottom: spacing(1);
   }
 
-  &.minimal {
-    list-style: none;
-    padding: 0;
+  h2 {
+    @include inter(300);
+    @include font-size(1.4);
+    letter-spacing: 0.5px;
+    margin-bottom: spacing(1);
+  }
+  h3 {
+    @include inter(500);
+    @include font-size(1.2);
+    letter-spacing: 0.4px;
 
-    li {
-      margin-bottom: 3px;
-      padding-left: 0;
+    &.bold {
+      font-weight: 700;
     }
   }
 
-  &.two-column {
-    -webkit-column-count: 2;
-    -webkit-column-gap: spacing(5.6);
-    column-count: 2;
-    column-gap: spacing(5.6);
+  h4 {
+    @include inter(400);
+    @include font-size(1);
+
+    &.bold {
+      font-weight: 700;
+    }
+  }
+  h5 {
+    @include inter(300);
+    @include font-size(0.8);
+
+    &.italic {
+      font-style: italic;
+    }
+  }
+
+  h6 {
+    @include inter();
+    @include font-size(0.6);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+
+    &:hover {
+      color: $link-color;
+    }
+
+    .fa-external-link {
+      font-size: 10px;
+      vertical-align: text-top;
+    }
+  }
+
+  // p,
+  // li {
+  //   @include font-size(2.75);
+  // }
+
+  blockquote {
+    @include font-size(2.75);
+    @include inter($isItalic: true);
+
+    margin: spacing(2) spacing(5);
+  }
+  em {
+    color: $gray-dark;
+  }
+
+  ul {
+    margin: spacing(2) 0 0;
+    -webkit-padding-start: spacing(5);
 
     li {
-      padding-left: 0;
+      padding-left: spacing(2);
+    }
+
+    &.minimal {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 3px;
+        padding-left: 0;
+      }
+    }
+
+    &.two-column {
+      -webkit-column-count: 2;
+      -webkit-column-gap: spacing(5.6);
+      column-count: 2;
+      column-gap: spacing(5.6);
+
+      li {
+        padding-left: 0;
+      }
     }
   }
 }

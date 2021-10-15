@@ -1,12 +1,12 @@
 {{#if resume.languages.length}}
-<div class="container languages-container">
-  {{> title value="Languages"}}
   {{#isArray resume.languages}}
-    {{#each .}}
-      <h4>{{language}} {{#if fluency}}: {{fluency}} {{/if}}</h4>
-    {{/each}}
+  <div class="container languages-container">
+    {{> title value="Languages"}}
+      {{#each .}}
+        <h4>{{language}} {{#if fluency}}: {{fluency}} {{/if}}</h4>
+      {{/each}}
+  </div>
   {{else}}
     {{{.}}}
   {{/isArray}}
-</div>
 {{/if}}

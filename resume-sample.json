@@ -30,41 +30,9 @@
       "client": "Test Client",
       "startDate": "2013-01-01",
       "endDate": "2014-04-06",
+      "inProgress": false,
+      "projectName": "Project Example",
       "summary": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
-      "skills": [
-        "Web development",
-        "Communication with team"
-      ],
-      "technologies": [
-        "Javascript", "React JS", "Firebase"
-      ]
-    },
-    {
-      "position": "CEO/President",
-      "company": "Pied Piper",
-      "client": "Pedro Gomez",
-      "city": "Mérida",
-      "startDate": "2014-04-13",
-      "endDate": "2015-04-13",
-      "projectName": "Syncron",
-      "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
-      "skills": [
-        "Web development",
-        "Communication with team"
-      ],
-      "technologies": [
-        "Javascript", "React JS", "Firebase"
-      ]
-    },
-    {
-      "position": "CEO/President",
-      "company": "Pied Piper",
-      "client": "Pedro Gomez",
-      "city": "Mérida",
-      "startDate": "2014-04-13",
-      "endDate": "2015-04-13",
-      "projectName": "Syncron",
-      "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
       "skills": [
         "Web development",
         "Communication with team"
@@ -111,37 +79,25 @@
   "education": [
     {
       "institution": "Mathematics faculty",
-      "area": "Computer Science",
       "studyType": "Bachelors degree",
-      "location": "Palo Alto, CA",
-      "specialization": "Machine Learning",
       "startDate": "2011-06-01",
       "endDate": "2014-01-01",
-      "gpa": "GPA 4.0",
-      "courses": [
-        "DB1101 - Basic SQL",
-        "CS2011 - Java Introduction"
-      ]
+      "inProgress": false
     },
     {
       "institution": "Mathematics faculty",
       "studyType": "Bachelors degree",
-      "location": "Palo Alto, CA",
-      "specialization": "Machine Learning",
       "startDate": "2011-06-01",
       "endDate": "2014-01-01",
-      "gpa": "GPA 4.0",
-      "courses": [
-        "DB1101 - Basic SQL",
-        "CS2011 - Java Introduction"
-      ]
+      "inProgress": false
     },
     {
       "institution": "Institute example",
       "specialization": "CMMI DEV 2 certificate",
       "studyType": "certification",
       "startDate": "2011-06-01",
-      "endDate": "2014-01-01"
+      "endDate": "2014-01-01",
+      "inProgress": false
     }
   ],
   "awards": [

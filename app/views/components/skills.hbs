@@ -1,16 +1,16 @@
 {{#ifHasSkills resume.skills}}
-<div class="container skills-container">
-  {{> title value="Skills"}}
-  <section>
   {{#isArray .}}
-    {{#each .}}
-      {{#isSkill .}}
-        <h4>{{name}}</h4>
-      {{/isSkill}}
-    {{/each}}
+  <div class="container skills-container">
+    {{> title value="Skills"}}
+    <section>
+      {{#each .}}
+        {{#isSkill .}}
+          <h4>{{name}}</h4>
+        {{/isSkill}}
+      {{/each}}
+    </section>
+  </div>
   {{else}}
     {{{.}}}
   {{/isArray}}
-  </section>
-</div>
 {{/ifHasSkills}}

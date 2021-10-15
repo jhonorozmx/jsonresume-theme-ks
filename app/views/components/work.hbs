@@ -1,8 +1,7 @@
 {{#if resume.work.length}}
-<div class="container work-container">
-  {{> title value="Professional history"}}
-
   {{#isArray resume.work}}
+    <div class="container work-container">
+    {{> title value="Professional history"}}
     {{#each .}}
       <section class="item">
 
@@ -56,10 +55,8 @@
 
       </section>
     {{/each}}
-
+    </div>
   {{else}}
     {{{.}}}
   {{/isArray}}
-
-</div>
 {{/if}}
