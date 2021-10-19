@@ -194,8 +194,13 @@ body {
   display: table;
   clear: both; }
 
+.flex, .profile-pic, .page, .page .resume-header .background-header .profile-header, .page .resume-content, .page .resume-footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
 .profile-pic {
-  display: flex;
   height: 100%;
   position: relative;
   text-align: center;
@@ -212,7 +217,6 @@ body {
 /* Layouts */
 .page {
   background: white;
-  display: flex;
   flex-direction: column;
   font-size: 14px;
   margin: 0;
@@ -256,7 +260,6 @@ body {
         background: #1e326b; }
       .page .resume-header .background-header .profile-header {
         color: white;
-        display: flex;
         flex-direction: column;
         height: 100%;
         position: relative;
@@ -273,11 +276,9 @@ body {
         .page .resume-header .background-header .profile-header span {
           font-size: 1em; }
   .page .resume-content {
-    display: flex;
     flex-grow: 1; }
   .page .resume-footer {
     color: white;
-    display: flex;
     padding-top: 1em;
     padding-bottom: 1em;
     text-align: center; }
@@ -394,7 +395,7 @@ body {
     <div class="resume-content">
       <aside class="left-column">
         <div class="left-column-padding">
-              {{#education.length}}<div class='container education-container'><div class='title'><h3>Education</h3></div>{{#education}}<section class='item'>{{#studyType}}<h4>{{studyType}}</h4>{{/studyType}}{{#institution}}<h4>{{institution}}</h4>{{/institution}}<h4>{{#startDate}}<span class='startDate'>({{startDate}}</span>{{/startDate}}{{#endDate}}<span class='endDate'>{{#inProgress}} - Present {{/inProgress}}{{^inProgress}}{{#endDate}} - {{endDate}}{{/endDate}}{{/inProgress}})</span></h4></section>{{/education}}{{/education.length}}
+              {{#education.length}}<div class='container education-container'><div class='title'><h3>Education</h3></div>{{#education}}<section class='item'>{{#studyType}}<h4>{{studyType}}</h4>{{/studyType}}{{#institution}}<h4>{{institution}}</h4>{{/institution}}<h4>{{#startDate}}<span class='startDate'>({{startDate}}</span>{{/startDate}}<span class='endDate'>{{#inProgress}} - Present {{/inProgress}}{{^inProgress}}{{#endDate}} - {{endDate}}{{/endDate}}{{/inProgress}})</span></h4></section>{{/education}}{{/education.length}}
           
               {{#technologies.length}}
               <div class="container technologies-container">
@@ -421,7 +422,6 @@ body {
                   <h4>
                     {{#startDate}}(<span class='startDate'>{{startDate}}</span>{{/startDate}}
                     {{#endDate}}<span class='endDate'> to {{endDate}}</span>){{/endDate}}
-                    
                   </h4>
                 </section>
               {{/certifications}}
@@ -435,7 +435,7 @@ body {
       <div class="right-column">
           {{#basics.summary}}<div class='summary-container'><div class='title'><h3>Professional Summary</h3></div><p class='summary'>{{basics.summary}}</p></div>{{/basics.summary}}
         
-            {{#work.length}}<div class='container work-container'><div class='title'><h3>Professional History</h3></div>{{#work}}<h4 class='summary-position'>{{position}}</h4><h4>{{company}}</h4><h4>{{projectName}}</h4><h4>{{client}}</h4><h4>{{#city}}{{city}}. {{/city}}{{#startDate}}<span class='startDate'>{{startDate}}</span>{{/startDate}}<span class='endDate'> {{#inProgress}} - Present {{/inProgress}}{{^inProgress}}{{#endDate}} - {{endDate}}{{/endDate}}{{/inProgress}}</span></h4>{{#skillsPreview}}{{name}}{{^last}} | {{/last}}{{/skillsPreview}}{{#technologiesPreview}}{{name}}{{^last}} | {{/last}}{{/technologiesPreview}}{{/work}}</div>{{/work.length}}
+            {{#work.length}}<div class='container work-container'><div class='title'><h3>Professional History</h3></div>{{#work}}<h4 class='summary-position'>{{position}}</h4><h4>{{company}}</h4><h4>{{projectName}}</h4><h4>{{client}}</h4><h4>{{#city}}{{city}}. {{/city}}{{#startDate}}<span class='startDate'>{{startDate}}</span>{{/startDate}}<span class='endDate'> {{#inProgress}} - Present {{/inProgress}}{{^inProgress}}{{#endDate}} - {{endDate}}{{/endDate}}{{/inProgress}}</span></h4>{{#summary}}<p class='summary'>{{summary}}</p>{{/summary}}{{#skillsPreview}}{{name}}{{^last}} | {{/last}}{{/skillsPreview}} {{#technologiesPreview}}{{name}}{{^last}} | {{/last}}{{/technologiesPreview}}{{/work}}</div>{{/work.length}}
       </div>
     </div>
     <div class="resume-footer  background-employee ">

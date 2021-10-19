@@ -19,8 +19,15 @@
   @include clearfix();
 }
 
-.profile-pic {
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+}
+
+.profile-pic {
+  @extend .flex;
   height: 100%;
   position: relative;
   text-align: center;
