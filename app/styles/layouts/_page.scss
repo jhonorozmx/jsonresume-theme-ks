@@ -1,7 +1,7 @@
 .page {
   @extend .flex;
+  @extend .flex-direction-column;
   background: $white;
-  flex-direction: column;
   font-size: 14px;
   margin: 0;
   min-height: $page-height;
@@ -54,8 +54,8 @@
 
       .profile-header {
         @extend .flex;
+        @extend .flex-direction-column;
         color: $white;
-        flex-direction: column;
         height: 100%;
         position: relative;
         width: 70%;
@@ -79,7 +79,7 @@
   }
   .resume-content {
     @extend .flex;
-    flex-grow: 1;
+    @extend .flex-grow-1;
   }
   .resume-footer {
     @extend .flex;
@@ -89,9 +89,9 @@
     padding-bottom: 1em;
     text-align: center;
     .footer-text-container {
+      @extend .flex-grow-1;
       line-height: 1.5em;
       margin: auto;
-      flex-grow: 1;
     }
 
     &.background-dev {
@@ -114,6 +114,9 @@
 
 .left-column {
   background-color: $gray-light;
+  -webkit-box: 0 0 30%;
+  -webkit-flex: 0 0 30%;
+  -ms-flexbox: 0 0 30%;
   flex: 0 0 30%;
   word-wrap: break-word;
 }

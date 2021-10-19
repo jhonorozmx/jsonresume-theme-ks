@@ -200,6 +200,18 @@ body {
   display: -ms-flexbox;
   display: flex; }
 
+.flex-grow-1, .page .resume-content, .page .resume-footer .footer-text-container {
+  -webkit-box-grow: 1;
+  -webkit-flex-grow: 1;
+  -ms-flexbox-grow: 1;
+  flex-grow: 1; }
+
+.flex-direction-column, .page, .page .resume-header .background-header .profile-header {
+  -webkit-box-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flexbox-direction: column;
+  flex-direction: column; }
+
 .profile-pic {
   height: 100%;
   position: relative;
@@ -217,7 +229,6 @@ body {
 /* Layouts */
 .page {
   background: white;
-  flex-direction: column;
   font-size: 14px;
   margin: 0;
   min-height: 60em;
@@ -260,7 +271,6 @@ body {
         background: #1e326b; }
       .page .resume-header .background-header .profile-header {
         color: white;
-        flex-direction: column;
         height: 100%;
         position: relative;
         width: 70%; }
@@ -275,8 +285,6 @@ body {
           margin-bottom: 0.5em; }
         .page .resume-header .background-header .profile-header span {
           font-size: 1em; }
-  .page .resume-content {
-    flex-grow: 1; }
   .page .resume-footer {
     color: white;
     display: none;
@@ -285,8 +293,7 @@ body {
     text-align: center; }
     .page .resume-footer .footer-text-container {
       line-height: 1.5em;
-      margin: auto;
-      flex-grow: 1; }
+      margin: auto; }
     .page .resume-footer.background-dev {
       background-color: #1e326b; }
     .page .resume-footer.background-employee {
@@ -301,6 +308,9 @@ body {
 
 .left-column {
   background-color: #f2f2f2;
+  -webkit-box: 0 0 30%;
+  -webkit-flex: 0 0 30%;
+  -ms-flexbox: 0 0 30%;
   flex: 0 0 30%;
   word-wrap: break-word; }
 
