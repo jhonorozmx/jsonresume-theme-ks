@@ -4,6 +4,7 @@
     "label": "{{basics.label}}",
     "imagePreview": "{{#basics.image}}<img src='{{basics.image}}' alt='profile-pic'/>{{/basics.image}}",
     "url": "{{basics.url}}",
+    "branding": true,
     "summaryPreview": "{{#basics.summary}}<div class='summary-container'><div class='title'><h3>Professional Summary</h3></div><p class='summary'>{{basics.summary}}</p></div>{{/basics.summary}}"
   },
   "work": "{{#work.length}}<div class='container work-container'><div class='title'><h3>Professional History</h3></div>{{#work}}<h4 class='summary-position'>{{position}}</h4><h4>{{company}}</h4><h4>{{projectName}}</h4><h4>{{client}}</h4><h4>{{#city}}{{city}}. {{/city}}{{#startDate}}<span class='startDate'>{{startDate}}</span>{{/startDate}}<span class='endDate'> {{#inProgress}} - Present {{/inProgress}}{{^inProgress}}{{#endDate}} - {{endDate}}{{/endDate}}{{/inProgress}}</span></h4>{{#summary}}<p class='summary'>{{summary}}</p>{{/summary}}{{#skillsPreview}}{{name}}{{^last}} | {{/last}}{{/skillsPreview}} {{#technologiesPreview}}{{name}}{{^last}} | {{/last}}{{/technologiesPreview}}{{/work}}</div>{{/work.length}}",
