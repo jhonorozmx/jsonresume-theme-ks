@@ -14,7 +14,7 @@
   <main id="resume" class="page">
     {{> resume-header}}
     <div class="resume-content">
-      <aside class="left-column">
+      <aside class="{{#if resume.basics.branding }} left-column left-column-branding {{else}} left-column left-column-nobranding {{/if}}">
         <div class="left-column-padding">
           {{> education }}
           {{> technologies }}

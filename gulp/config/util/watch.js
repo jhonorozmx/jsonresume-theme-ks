@@ -18,7 +18,7 @@ gulp.task('watch', function () {
     // watch for changes
     gulp.watch([
       'public/**/*',
-      'resume.json'
+      'resume-template.json'
     ]).on('change', browserSync.reload);
 
     gulp.watch('app/views/**/*.hbs', ['html']);

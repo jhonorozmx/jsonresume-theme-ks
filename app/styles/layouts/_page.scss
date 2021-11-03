@@ -21,6 +21,13 @@
           .my-auto {
             text-align: left;
           }
+          .ksquare-image {
+            background-image: url($ksquare-image);
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: block;
+            height: 2em;
+          }
         }
       }
     }
@@ -72,10 +79,7 @@
           text-align: center;
         }
         .ksquare-image {
-          background-image: url($ksquare-image);
-          background-repeat: no-repeat;
-          background-size: contain;
-          height: 2em;
+          display: none;
         }
         h1 {
           margin-top: 0.3em;
@@ -85,6 +89,14 @@
         }
         span {
           font-size: 1em;
+        }
+        &.w-100 {
+          height: 100%;
+          display: flex;
+          .my-auto {
+            // flex: 0 0 100%;
+            text-align: center;
+          }
         }
       }
     }
@@ -125,12 +137,17 @@
 }
 
 .left-column {
-  background-color: $gray-light;
   -webkit-box: 0 0 30%;
   -webkit-flex: 0 0 30%;
   -ms-flexbox: 0 0 30%;
   flex: 0 0 30%;
   word-wrap: break-word;
+  &.left-column-branding {
+    background-color: $gray-light;
+  }
+  &.left-column-nobranding {
+    background-color: $white;
+  }
 }
 
 .right-column {
