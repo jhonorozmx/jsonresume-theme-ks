@@ -72,13 +72,23 @@ handlebars.registerHelper({
         {{/institution}}
         <h4>
           {{#startDate}}(<span class='startDate'>{{startDate}}</span>{{/startDate}}
-          {{#endDate}}<span class='endDate'> to {{endDate}}</span>){{/endDate}}
+          <span class='endDate'> 
+            {{#inProgress}}
+            - Present)
+            {{/inProgress}}
+            {{^inProgress}}
+              {{#endDate}}
+              - {{endDate}})
+              {{/endDate}}
+            {{/inProgress}}
+          </span>
         </h4>
       </section>
     {{/certifications}}
   </div>
   {{/certifications.length}}`,
 
+  centerHeader: (branding, image, options) => (!branding && !image) ? options.fn(this) : options.inverse(this),
   isArray: (element, options) => Array.isArray(element) ? options.fn(element) : options.inverse(element),
   isDev: (label, options) => ["develop", "programmer"].some(term =>  label.toLowerCase().includes(term)) ? options.fn(this) : options.inverse(this),
   isTechnology: (skill, options) => isTechnology(skill.keywords) ? options.fn(skill) : options.inverse(this),

@@ -26,6 +26,20 @@
   display: flex;
 }
 
+.flex-grow-1 {
+  -webkit-box-grow: 1;
+  -webkit-flex-grow: 1;
+  -ms-flexbox-grow: 1;
+  flex-grow: 1;
+}
+
+.flex-direction-column {
+  -webkit-box-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flexbox-direction: column;
+  flex-direction: column;
+}
+
 .profile-pic {
   @extend .flex;
   height: 100%;
@@ -38,6 +52,14 @@
     margin: auto;
     width: $profile-pic-size;
   }
+}
+
+.d-none {
+  display: none !important;
+}
+
+.w-100 {
+  width: 100% !important;
 }
 
 .summary {

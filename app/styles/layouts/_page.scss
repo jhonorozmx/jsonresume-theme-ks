@@ -1,7 +1,7 @@
 .page {
   @extend .flex;
+  @extend .flex-direction-column;
   background: $white;
-  flex-direction: column;
   font-size: 14px;
   margin: 0;
   min-height: $page-height;
@@ -10,10 +10,26 @@
   // @include shadow();
   @include clearfix();
   .resume-header {
-    .background-employee,
-    .background-dev {
-      background-repeat: no-repeat;
-      background-size: cover;
+    background-color: $gray-light;
+    .background-header {
+      &.background-employee,
+      &.background-dev {
+        background-repeat: no-repeat;
+        background-size: cover;
+        .profile-header {
+          color: $white;
+          .my-auto {
+            text-align: left;
+          }
+          .ksquare-image {
+            background-image: url($ksquare-image);
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: block;
+            height: 2em;
+          }
+        }
+      }
     }
     .background-employee {
       background-image: url($background-employee-image);
@@ -22,16 +38,16 @@
       background-image: url($background-dev-image);
     }
     &.resume-header-dev {
-      border-bottom: 0.5em solid $blue-ksquare;
+      border-bottom: 0.6em solid $blue-ksquare;
     }
     &.resume-header-employee {
-      border-bottom: 0.5em solid $dark-blue;
+      border-bottom: 0.6em solid $dark-blue;
     }
 
     height: $header-height;
 
     .background-header {
-      height: $header-height + 0.05em;
+      height: $header-height + 0.1em;
       position: relative;
       width: $page-width;
 
@@ -54,16 +70,16 @@
 
       .profile-header {
         @extend .flex;
-        color: $white;
-        flex-direction: column;
+        @extend .flex-direction-column;
+        color: $dark-blue;
         height: 100%;
         position: relative;
         width: 70%;
+        .my-auto {
+          text-align: center;
+        }
         .ksquare-image {
-          background-image: url($ksquare-image);
-          background-repeat: no-repeat;
-          background-size: contain;
-          height: 2em;
+          display: none;
         }
         h1 {
           margin-top: 0.3em;
@@ -74,12 +90,20 @@
         span {
           font-size: 1em;
         }
+        &.w-100 {
+          height: 100%;
+          display: flex;
+          .my-auto {
+            // flex: 0 0 100%;
+            text-align: center;
+          }
+        }
       }
     }
   }
   .resume-content {
     @extend .flex;
-    flex-grow: 1;
+    @extend .flex-grow-1;
   }
   .resume-footer {
     @extend .flex;
@@ -89,9 +113,9 @@
     padding-bottom: 1em;
     text-align: center;
     .footer-text-container {
+      @extend .flex-grow-1;
       line-height: 1.5em;
       margin: auto;
-      flex-grow: 1;
     }
 
     &.background-dev {
@@ -113,9 +137,17 @@
 }
 
 .left-column {
-  background-color: $gray-light;
+  -webkit-box: 0 0 30%;
+  -webkit-flex: 0 0 30%;
+  -ms-flexbox: 0 0 30%;
   flex: 0 0 30%;
   word-wrap: break-word;
+  &.left-column-branding {
+    background-color: $gray-light;
+  }
+  &.left-column-nobranding {
+    background-color: $white;
+  }
 }
 
 .right-column {
