@@ -50,6 +50,7 @@
   img {
     height: $profile-pic-size;
     margin: auto;
+    object-fit: cover;
     width: $profile-pic-size;
   }
 }
