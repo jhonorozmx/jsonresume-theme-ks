@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+  <title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
+  <style>
+    {{{css}}}
+  </style>
+</head>
+
+<body>
+  <main id="resume" class="page">
+    {{> resume-header}}
+    <div class="resume-content">
+      <aside class="{{#if resume.basics.branding }} left-column left-column-branding {{else}} left-column left-column-nobranding {{/if}}">
+        <div class="left-column-padding">
+          {{> education }}
+          {{> technologies }}
+          {{> certifications }}
+          {{> skills }}
+          {{> awards }}
+          {{> languages }}
+        </div>
+      </aside>
+      <div class="right-column">
+        {{> summary}}
+        {{> work }}
+        {{> volunteer }}
+        {{> publications }}
+        {{> references }}
+      </div>
+    </div>
+    <div class="resume-footer {{#isDev resume.basics.label }} background-dev {{else}} background-employee {{/isDev}}">
+      <div class="footer-text-container">
+        <h4>
+          <strong>Girish Mallampalli |</strong> Engineering and Digital Transformation <strong>| T. 9+1 646 775 1496 |</strong>
+          girish.mallampalli@theksquaregroup.com
+        </h4>
+        <h4>
+          <strong>Dallas HQ</strong>, 433 E Las Colinas Blvd, Suite 850, Irving, TX 75039.
+        </h4>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

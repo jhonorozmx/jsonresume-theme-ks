@@ -1,0 +1,14 @@
+{{#if resume.awards.length}}
+  {{#isArray resume.awards}}
+    <div class="container awards-container">
+      {{> title value="Awards"}}
+      <section class="item">
+        {{#each .}}
+          <h4>{{title}}</h4>
+        {{/each}}
+      </section>
+    </div>
+  {{else}}
+    {{{.}}}
+  {{/isArray}}
+{{/if}}

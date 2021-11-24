@@ -1,0 +1,19 @@
+
+{{#ifHasTechnologies resume.skills}}
+  {{#isArray .}}
+    <div class="container technologies-container">
+      {{> title value="Technologies"}}
+      <section>
+        <h4>
+          {{#each .}}
+            {{#isTechnology .}} 
+              {{name}} |
+            {{/isTechnology}}
+          {{/each}}
+        </h4>    
+      </section>
+    </div>
+  {{else}}
+    {{{technologiesMustache}}}
+  {{/isArray}}
+{{/ifHasTechnologies}}

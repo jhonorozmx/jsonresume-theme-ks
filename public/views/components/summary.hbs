@@ -1,0 +1,14 @@
+{{#resume.basics}}
+{{#if summary}}
+<div class="summary-container">
+  {{> title value="Professional Summary"}}
+  <p class="summary">
+    {{summary}}
+  </p>
+</div>
+{{/if}}
+{{#if summaryPreview}}
+  {{{summaryPreview}}}
+{{/if}}
+
+{{/resume.basics}}
