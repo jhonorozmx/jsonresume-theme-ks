@@ -51,23 +51,6 @@
       position: relative;
       width: $page-width;
 
-      &::before {
-        background-size: cover;
-        bottom: 0px;
-        content: "";
-        left: 0px;
-        opacity: 0.89;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-      }
-      &.background-employee:before {
-        background: $background-employee;
-      }
-      &.background-dev:before {
-        background: $background-dev;
-      }
-
       .profile-header {
         @extend .flex;
         @extend .flex-direction-column;
