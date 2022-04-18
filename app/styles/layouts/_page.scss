@@ -11,6 +11,9 @@
   @include clearfix();
   .resume-header {
     background-color: $gray-light;
+    display: flex;
+    min-height: $header-height;
+    
     .background-header {
       &.background-employee,
       &.background-dev {
@@ -18,11 +21,14 @@
         background-size: cover;
         .profile-header {
           color: $white;
+
+          &.pull-right {
+            padding: 0.5em 0;
+          }
           .my-auto {
             text-align: left;
           }
           .ksquare-image {
-            background-image: url($ksquare-image);
             background-repeat: no-repeat;
             background-size: contain;
             display: block;
@@ -30,24 +36,28 @@
           }
         }
       }
+
     }
+
     .background-employee {
       background-image: url($background-employee-image);
+      border-bottom: 0.6em solid $dark-blue;
+      .ksquare-image {
+        background-image: url($ksquare-logo-blue);
+      }
     }
+
     .background-dev {
       background-image: url($background-dev-image);
-    }
-    &.resume-header-dev {
       border-bottom: 0.6em solid $blue-ksquare;
+      .ksquare-image {
+        background-image: url($ksquare-logo-white);
+      }
     }
-    &.resume-header-employee {
-      border-bottom: 0.6em solid $dark-blue;
-    }
-
-    height: $header-height;
 
     .background-header {
-      height: $header-height + 0.1em;
+      align-items: center;
+      display: flex;
       position: relative;
       width: $page-width;
 
