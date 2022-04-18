@@ -247,30 +247,35 @@ body {
     clear: both; }
   .page .resume-header {
     background-color: #f2f2f2;
-    height: 10.7em; }
+    display: flex;
+    min-height: 11.2em; }
     .page .resume-header .background-header.background-employee, .page .resume-header .background-header.background-dev {
       background-repeat: no-repeat;
       background-size: cover; }
       .page .resume-header .background-header.background-employee .profile-header, .page .resume-header .background-header.background-dev .profile-header {
         color: white; }
+        .page .resume-header .background-header.background-employee .profile-header.pull-right, .page .resume-header .background-header.background-dev .profile-header.pull-right {
+          padding: 0.5em 0; }
         .page .resume-header .background-header.background-employee .profile-header .my-auto, .page .resume-header .background-header.background-dev .profile-header .my-auto {
           text-align: left; }
         .page .resume-header .background-header.background-employee .profile-header .ksquare-image, .page .resume-header .background-header.background-dev .profile-header .ksquare-image {
-          background-image: url("https://dev-kportalapp-frontend-bucket.s3.us-east-2.amazonaws.com/resumes-templates/ks-logo-white.png");
           background-repeat: no-repeat;
           background-size: contain;
           display: block;
           height: 2em; }
     .page .resume-header .background-employee {
-      background-image: url("https://dev-kportalapp-frontend-bucket.s3.us-east-2.amazonaws.com/resumes-templates/FondoBranding1%403x.png"); }
-    .page .resume-header .background-dev {
-      background-image: url("https://dev-kportalapp-frontend-bucket.s3.us-east-2.amazonaws.com/resumes-templates/FondoBranding2%403x.png"); }
-    .page .resume-header.resume-header-dev {
-      border-bottom: 0.6em solid #46a0b6; }
-    .page .resume-header.resume-header-employee {
+      background-image: url("https://dev-kportalapp-frontend-bucket.s3.us-east-2.amazonaws.com/resumes-templates/FondoBranding1%403x.png");
       border-bottom: 0.6em solid #1e326b; }
+      .page .resume-header .background-employee .ksquare-image {
+        background-image: url("https://dev-kportalapp-frontend-bucket.s3.us-east-2.amazonaws.com/resumes-templates/ks-logo-blue%402x.png"); }
+    .page .resume-header .background-dev {
+      background-image: url("https://dev-kportalapp-frontend-bucket.s3.us-east-2.amazonaws.com/resumes-templates/FondoBranding2%403x.png");
+      border-bottom: 0.6em solid #46a0b6; }
+      .page .resume-header .background-dev .ksquare-image {
+        background-image: url("https://dev-kportalapp-frontend-bucket.s3.us-east-2.amazonaws.com/resumes-templates/ks-logo-white%402x.png"); }
     .page .resume-header .background-header {
-      height: 10.8em;
+      align-items: center;
+      display: flex;
       position: relative;
       width: 100%; }
       .page .resume-header .background-header .profile-header {
@@ -399,7 +404,7 @@ body {
 
 <body>
   <main id="resume" class="page">
-    <header class="resume-header clearfix  resume-header-employee ">
+    <header class="resume-header clearfix ">
       <div class="background-header  background-employee ">
         <div class="profile-pic  pull-left">
             {{#basics.image}}<img src='{{basics.image}}' alt='profile-pic'/>{{/basics.image}}
