@@ -11,7 +11,7 @@
   @include clearfix();
   .resume-header {
     background-color: $gray-light;
-    display: flex;
+    @extend .flex;
     min-height: $header-height;
     
     .background-header {
@@ -41,7 +41,6 @@
 
     .background-employee {
       background-image: url($background-employee-image);
-      border-bottom: 0.6em solid $dark-blue;
       .ksquare-image {
         background-image: url($ksquare-logo-blue);
       }
@@ -49,15 +48,21 @@
 
     .background-dev {
       background-image: url($background-dev-image);
-      border-bottom: 0.6em solid $blue-ksquare;
       .ksquare-image {
         background-image: url($ksquare-logo-white);
       }
     }
 
+    &.resume-header-dev {
+      border-bottom: 0.6em solid $blue-ksquare;
+    }
+    &.resume-header-employee {
+      border-bottom: 0.6em solid $dark-blue;
+    }
+
     .background-header {
-      align-items: center;
-      display: flex;
+      @extend .align-items-center;
+      @extend .flex;
       position: relative;
       width: $page-width;
 
